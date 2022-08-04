@@ -9,4 +9,16 @@ const images = [
     {'id': '6', 'url':'./img/ippo.png'}
 ]
 
-loadImages(images)
+const container = document.querySelector('#container-items')
+
+const loadImages = (images, container) => {
+    images.forEach(image => {
+        container.innerHTML += `
+            <div class='item'>
+                <img src='${image.url}'
+            </div>
+        `
+    })
+}
+
+loadImages(images, container)
